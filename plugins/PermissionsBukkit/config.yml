@@ -1,0 +1,83 @@
+# PermissionsBukkit configuration file
+# 
+# A permission node is a string like 'permissions.build', usually starting
+# with the name of the plugin. Refer to a plugin's documentation for what
+# permissions it cares about. Each node should be followed by true to grant
+# that permission or false to revoke it, as in 'permissions.build: true'.
+# Some plugins provide permission nodes that map to a group of permissions -
+# for example, PermissionsBukkit has 'permissions.*', which automatically
+# grants all admin permissions. You can also specify false for permissions
+# of this type.
+# 
+# Users inherit permissions from the groups they are a part of. If a user is
+# not specified here, or does not have a 'groups' node, they will be in the
+# group 'default'. Permissions for individual users may also be specified by
+# using a 'permissions' node with a list of permission nodes, which will
+# override their group permissions. World permissions may be assigned to
+# users with a 'worlds:' entry.
+# 
+# Groups can be assigned to players and all their permissions will also be
+# assigned to those players. Groups can also inherit permissions from other
+# groups. Like user permissions, groups may override the permissions of their
+# parent group(s). Unlike users, groups do NOT automatically inherit from
+# default. World permissions may be assigned to groups with a 'worlds:' entry.
+users:
+  ConspiracyWizard:
+    permissions:
+      permissions.example: true
+    groups:
+    - admin
+  62b30574-59ad-4aed-81ef-c993ddd82afa:
+    groups:
+    - user
+    name: chuckzee
+  bb04fc3c-2565-4fd4-a83f-e4a2bd5f5368:
+    groups:
+    - user
+    name: Thicc_Wulf
+  2c598464-7aa8-418f-b0e6-e7049be56356:
+    groups:
+    - user
+    name: IncredibleWord
+  3cdc3bd7-ad28-4eda-9195-4512c27da7f7:
+    groups:
+    - user
+    name: thehock101
+  2b08fbda-cf0c-4d57-ad21-ebda176acc05:
+    groups:
+    - user
+    name: iTHROWllamas
+groups:
+  default:
+    permissions:
+      permissions.build: true
+  admin:
+    permissions:
+      permissions.*: true
+    inheritance:
+    - user
+  user:
+    permissions:
+      permissions.build: true
+      multiverse.teleport.self.NAME: false
+      multiverse.core.list.worlds: true
+      multiverse.teleport.self.*: false
+      multiverse.teleport.self.w: true
+      multiverse.teleport.self.e: false
+      multiverse-portal.list: true
+      multiverse.portal.access.MatrixPortal: true
+      multiverse.portal.access.WorldPortal: true
+      multiverse.portal.access.WorldToBielstol: true
+      multiverse.portal.access.BielstolToWorld: true
+      multiverse.portal.access.AzteccaToWorld: true
+      multiverse.portal.access.WorldToAztecca: true
+      multiverse.portal.access.AcquiaToWorld: true
+      multiverse.portal.access.WorldToAcquia: true
+    worlds:
+      creative:
+        coolplugin.item: true
+    inheritance:
+    - default
+messages:
+  build: '&cYou do not have permission to build here.'
+debug: false

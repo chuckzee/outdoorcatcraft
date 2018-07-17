@@ -1,0 +1,89 @@
+portals:
+  WorldPortal:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    teleportnonplayers: false
+    handlerscript: ''
+    owner: chuckzee
+    location: 296.0,72.0,39.0:296.0,76.0,42.0
+    world: world
+    destination: p:MatrixPortal
+  MatrixPortal:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    teleportnonplayers: false
+    handlerscript: ''
+    owner: chuckzee
+    location: -511.0,3.0,-575.0:-508.0,7.0,-575.0
+    world: Matrix
+    destination: p:WorldPortal
+  WorldToBielstol:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    teleportnonplayers: false
+    handlerscript: ''
+    owner: chuckzee
+    location: 287.0,73.0,44.0:287.0,76.0,47.0
+    world: world
+    destination: p:BielstolToWorld
+  BielstolToWorld:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    teleportnonplayers: false
+    handlerscript: ''
+    owner: chuckzee
+    location: 135.0,67.0,-145.0:135.0,70.0,-142.0
+    world: Bielstol
+    destination: p:WorldToBielstol
+  WorldToAztecca:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    teleportnonplayers: false
+    handlerscript: ''
+    owner: chuckzee
+    location: 296.0,73.0,32.0:296.0,76.0,35.0
+    world: world
+    destination: p:AzteccaToWorld
+  AzteccaToWorld:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    teleportnonplayers: false
+    handlerscript: ''
+    owner: chuckzee
+    location: -59.0,64.0,37.0:-59.0,67.0,40.0
+    world: Aztecca
+    destination: p:WorldToAztecca
+  AcquiaToWorld:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    teleportnonplayers: false
+    handlerscript: ''
+    owner: chuckzee
+    location: 128.0,68.0,60.0:128.0,71.0,63.0
+    world: Acquia
+    destination: p:WorldToAcquia
+  WorldToAcquia:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    teleportnonplayers: false
+    handlerscript: ''
+    owner: chuckzee
+    location: 289.0,73.0,29.0:292.0,76.0,29.0
+    world: world
+    destination: p:AcquiaToWorld
